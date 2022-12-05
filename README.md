@@ -12,5 +12,5 @@ Run the script
 Run externally
 
 ```sh
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/devorbitus/akeyless-connectivity-check/main/check_connectivity.sh)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/akeyless-community/akeyless-connectivity-check/main/check_connectivity.sh)"
 ```
