@@ -2,29 +2,35 @@
 
 CRITICAL_SERVICE_CONNECTIVITY_MISSING=false
 
+# For a single-tenant environment you should use 
+# the sub-domain like this:
+# AKEYLESS_DOMAIN=".mycorp.akeyless.io"
+AKEYLESS_DOMAIN=".akeyless.io"
+
 declare -a akeyless_urls=(
-    "https://vault.akeyless.io/status"
-    "https://auth.akeyless.io/status"
-    "https://audit.akeyless.io/status"
-    "https://bis.akeyless.io/status"
-    "https://gator.akeyless.io/status"
-    "https://kfm1.akeyless.io/status"
-    "https://kfm2.akeyless.io/status"
-    "https://kfm3.akeyless.io/status"
-    "https://kfm4.akeyless.io/status"
-    "https://vault-ro.akeyless.io/status"
-    "https://auth-ro.akeyless.io/status"
-    "https://audit-ro.akeyless.io/status"
-    "https://bis-ro.akeyless.io/status"
-    "https://gator-ro.akeyless.io/status"
-    "https://kfm1-ro.akeyless.io/status"
-    "https://kfm2-ro.akeyless.io/status"
-    "https://kfm3-ro.akeyless.io/status"
-    "https://kfm4-ro.akeyless.io/status"
+    "https://vault${AKEYLESS_DOMAIN}/status"
+    "https://auth${AKEYLESS_DOMAIN}/status"
+    "https://audit${AKEYLESS_DOMAIN}/status"
+    "https://bis${AKEYLESS_DOMAIN}/status"
+    "https://gator${AKEYLESS_DOMAIN}/status"
+    "https://kfm1${AKEYLESS_DOMAIN}/status"
+    "https://kfm2${AKEYLESS_DOMAIN}/status"
+    "https://kfm3${AKEYLESS_DOMAIN}/status"
+    "https://kfm4${AKEYLESS_DOMAIN}/status"
+    "https://vault-ro${AKEYLESS_DOMAIN}/status"
+    "https://auth-ro${AKEYLESS_DOMAIN}/status"
+    "https://audit-ro${AKEYLESS_DOMAIN}/status"
+    "https://bis-ro${AKEYLESS_DOMAIN}/status"
+    "https://gator-ro${AKEYLESS_DOMAIN}/status"
+    "https://kfm1-ro${AKEYLESS_DOMAIN}/status"
+    "https://kfm2-ro${AKEYLESS_DOMAIN}/status"
+    "https://kfm3-ro${AKEYLESS_DOMAIN}/status"
+    "https://kfm4-ro${AKEYLESS_DOMAIN}/status"
+    ""
 )
 
 declare -a legacy_akeyless_or_other_urls=(
-    "https://rest.akeyless.io"
+    "https://rest${AKEYLESS_DOMAIN}"
     "https://akeyless-cli.s3.us-east-2.amazonaws.com"
     "https://akeylessservices.s3.us-east-2.amazonaws.com"
     "https://sqs.us-east-2.amazonaws.com"
