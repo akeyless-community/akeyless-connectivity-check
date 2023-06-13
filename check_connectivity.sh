@@ -26,7 +26,6 @@ declare -a akeyless_urls=(
     "https://kfm2-ro${AKEYLESS_DOMAIN}/status"
     "https://kfm3-ro${AKEYLESS_DOMAIN}/status"
     "https://kfm4-ro${AKEYLESS_DOMAIN}/status"
-    ""
 )
 
 declare -a legacy_akeyless_or_other_urls=(
